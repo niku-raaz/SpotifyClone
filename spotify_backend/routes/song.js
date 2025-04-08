@@ -23,7 +23,7 @@ router.post(
 );
 
 // Get route to get all songs I have published.
-router.get(
+router.get( 
     "/get/mysongs",
     passport.authenticate("jwt", {session: false}),
     async (req, res) => {

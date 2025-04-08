@@ -1,11 +1,9 @@
-// npm init : package.json -- This is a node project.
-// npm i express : expressJs package install hogya. -- project came to know that we are using express
-// We finally use express
+
 
 const express = require("express");
 const mongoose = require("mongoose");
 const JwtStrategy = require("passport-jwt").Strategy,
-    ExtractJwt = require("passport-jwt").ExtractJwt;
+    ExtractJwt = require("passport-jwt").ExtractJwt; 
 const passport = require("passport");
 const User = require("./models/User");
 const authRoutes = require("./routes/auth");
@@ -19,17 +17,10 @@ const port = 8080;
 app.use(cors());
 app.use(express.json());
 
-
-
-// console.log(process.env);
-
-// connecting with databse
 mongoose
    .connect(
- //   "mongodb+srv://nikurajj22:"+process.env.MONGO_PASSWORD+"<password>@cluster0.tgoffv8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-   "mongodb+srv://nikurajj22:"
-   +process.env.MONGO_PASSWORD+
-   "@cluster0.tgoffv8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://nikurajj22:Mg9dprYNdMoNZcOW@clonespotify.px8rvwx.mongodb.net/?retryWrites=true&w=majority&appName=CloneSPOTIFY",
+
     
     {
        useNewUrlParser: true,

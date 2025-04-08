@@ -11,7 +11,7 @@ const SingleSongCard = ({info, playSound}) => {
                 setCurrentSong(info);
             }}
         >
-            <div
+            <div 
                 className="w-12 h-12 bg-cover bg-center"
                 style={{
                     backgroundImage: `url("${info.thumbnail}")`,

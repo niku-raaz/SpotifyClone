@@ -1,8 +1,8 @@
 import {openUploadWidget} from "../../utils/CloudinaryService";
- import {cloudinary_upload_preset} from "../../config";
+import {cloudinary_upload_preset} from "../../utils/config";
 
 const CloudinaryUpload = ({setUrl, setName}) => {
-    const uploadImageWidget = () => {
+    const uploadImageWidget = () => { 
         let myUploadWidget = openUploadWidget(
             {
                 cloudName: "duxbyzzuq",
@@ -15,12 +15,12 @@ const CloudinaryUpload = ({setUrl, setName}) => {
                     setName(result.info.original_filename);
                 } else {
                     if (error) {
-                        console.log(error);
+                        console.log(error);  
                     }
                 }
             } 
         );
-        myUploadWidget.open();
+        myUploadWidget.open(); 
     };
 
     return (
